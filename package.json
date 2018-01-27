@@ -1,20 +1,23 @@
 {
-  "name": "18.1.9_scraping",
+  "name": "real-fake-news",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
+  "description": "Scraping fthe Onion.com",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "cheerio": "^0.20.0",
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+    "logger": "0.0.1",
     "mongoose": "^5.0.1",
-    "request": "^2.69.0"
-  }
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.11",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafal Kociolek",
+  "license": "ISC"
 }
