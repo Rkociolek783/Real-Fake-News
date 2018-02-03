@@ -61,7 +61,7 @@ router.get("/scrape", (req, res) => {
 router.get('/articles', function(req, res) {
 
   // Calls the database models and grabs the top 5 topics
-  Article.find()
+  Article.find().sort({_id: -1})
     .populate('notes')
        // Then, send them to the handlebars template to be rendered
     .exec(function(error, doc){
