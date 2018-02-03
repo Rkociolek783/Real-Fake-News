@@ -12,7 +12,7 @@ var {Notes} = require('./server/models/Note.js');
 
 var app = express();
 
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, './public')));
 
 
 app.use(logger("dev"));
@@ -32,6 +32,8 @@ app.set("view engine", "handlebars");
 var router = require('./controllers/routeController.js');
 app.use('/', router);
 
-app.listen(3000, () => {
+var port = process.env.PORT || 3000;
+
+app.listen(port, () => {
     console.log('Started on Port 3000');
 });
