@@ -6,9 +6,9 @@ var cheerio = require("cheerio");
 var logger = require('morgan');
 var path = require("path");
 
-var {mongoose} = require('./db/mongoose');
-var {Article} = require('./models/Article.js');
-var {Notes} = require('./models/Note.js');
+var {mongoose} = require('./server/db/mongoose');
+var {Article} = require('./server/models/Article.js');
+var {Notes} = require('./server/models/Note.js');
 
 var app = express();
 
@@ -29,7 +29,7 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
-var router = require('../controllers/routeController.js');
+var router = require('./controllers/routeController.js');
 app.use('/', router);
 
 app.listen(3000, () => {
