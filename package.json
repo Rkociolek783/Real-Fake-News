@@ -2,7 +2,11 @@
   "name": "real-fake-news",
   "version": "1.0.0",
   "description": "Scraping fthe Onion.com",
-  "main": "index.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
@@ -15,9 +19,6 @@
     "request": "^2.83.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Rafal Kociolek",
   "license": "ISC"
 }
